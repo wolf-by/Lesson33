@@ -1,6 +1,6 @@
 <h2>About Page</h2>
 </br>
-<button class="btn btn-primery" onclick="something()">Click Me!</button>
+<button type="button" class="btn btn-primary" onclick="something()">Click Me!</button>
 
 <h2>Catalog </h2>
 
@@ -15,6 +15,10 @@
 				<img src="<%= product.path_to_image %>" alt="<%= product.title %>" class="img-thumbnail"><br>
 				<%= product.price %> RUB<br>
 				</p>
+				<br>
+				<button type="button" class="btn btn-primary" >Add to Cart</button>
+				<br>
+				<br>
 				</div>
 			<% end %>
 		
