@@ -9,3 +9,8 @@ function something()
 		
 			alert(x);
 		}
+
+function add_to_cart(id)
+		{
+			alert('Pizza id ' + id);
+		}
