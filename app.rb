@@ -20,8 +20,8 @@ get '/' do
 	erb :index
 end
 
-get '/about' do
-	erb :about
+get '/catalog' do
+	erb :catalog
 end
 
 get '/product/:id' do
