@@ -10,6 +10,12 @@ function something()
 			//alert(x);
 		}
 
+function update_orders_input ()
+{
+	var orders = cart_get_orders();
+	$('#orders_input').val(orders);
+}
+
 function add_to_cart(id)
 		{
 			//alert('Pizza id ' + id);
@@ -23,6 +29,7 @@ function add_to_cart(id)
 			var y = 'Pizza: ' + key + ' Quantity: ' + x + ' Total: ' + cart_get_number_of_items();
 			alert(y);
 
+			update_orders_input();
 		}
 
 function cart_get_number_of_items()
