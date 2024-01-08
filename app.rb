@@ -24,6 +24,10 @@ get '/catalog' do
 	erb :catalog
 end
 
+post '/cart' do
+	erb 'Hi'
+end
+
 get '/product/:id' do
 
 	# получаем переменную url
