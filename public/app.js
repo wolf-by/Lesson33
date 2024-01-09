@@ -1,3 +1,19 @@
+function add_to_cart(id)
+		{
+			//alert('Pizza id ' + id);
+			var key = 'product_' + id;
+			var x = window.localStorage.getItem(key);
+			x = x * 1 + 1;
+			
+			window.localStorage.setItem(key, x);
+
+
+			var y = 'Pizza: ' + key + ' Quantity: ' + x + ' Total: ' + cart_get_number_of_items();
+			//alert(y);
+
+			update_orders_input();
+			update_orders_button();
+		}
 
 function something()
 		{
@@ -16,21 +32,11 @@ function update_orders_input ()
 	$('#orders_input').val(orders);
 }
 
-function add_to_cart(id)
-		{
-			//alert('Pizza id ' + id);
-			var key = 'product_' + id;
-			var x = window.localStorage.getItem(key);
-			x = x * 1 + 1;
-			
-			window.localStorage.setItem(key, x);
-
-
-			var y = 'Pizza: ' + key + ' Quantity: ' + x + ' Total: ' + cart_get_number_of_items();
-			alert(y);
-
-			update_orders_input();
-		}
+function update_orders_button()
+{
+	var text = 'Cart (' + cart_get_number_of_items() + ')';
+	$('#orders_button').val(text);
+}
 
 function cart_get_number_of_items()
 {
